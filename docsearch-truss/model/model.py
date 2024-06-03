@@ -48,7 +48,7 @@ class Model:
             "A cheetah is running behind its prey.",
         ]
         result = []
-        ranks =  self._model.rank(model_input['prompt'], corpus)
+        ranks =  self._model.rank(model_input['query'], corpus)
         for rank in ranks:
             result.append(corpus[rank['corpus_id']])
         return result[offset:(limit+offset)]
